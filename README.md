@@ -42,34 +42,29 @@ The app was developed as coursework for the Mobile Application Development modul
 
 ## 📱 Screenshots
 
-Add screenshots inside a folder called:
-
-```text
-Screenshots/
-```
-
-Recommended screenshots:
-
-| Screenshot                | What to capture                                                   |
-| ------------------------- | ----------------------------------------------------------------- |
-| `01-categories.png`       | The main category screen with several categories visible          |
-| `02-habit-list.png`       | A category opened with multiple habits showing                    |
-| `03-completed-habits.png` | Habits marked as complete, showing strikethrough/streak behaviour |
-| `04-date-diary.png`       | The DateBar showing movement between different days               |
-| `05-edit-habit.png`       | The habit edit sheet open                                         |
-| `06-sort-filter.png`      | The sort/filter menu open                                         |
-| `07-empty-state.png`      | An empty category or empty habit list state                       |
-| `08-dark-mode.png`        | A clean dark mode screenshot of the main app                      |
-
-Example layout:
-
-```markdown
 <p align="center">
-  <img src="Screenshots/01-home.PNG" width="220">
-  <img src="Screenshots/02-habit-list.png" width="220">
-  <img src="Screenshots/08-dark-mode.png" width="220">
+  <img src="./Screenshots/01-home.PNG" width="260"/>
+  <img src="./Screenshots/02-habits.PNG" width="260"/>
+  <img src="./Screenshots/03-datebar.PNG" width="260"/>
 </p>
-```
+
+<p align="center">
+  <img src="./Screenshots/04-sort-filter.PNG" width="260"/>
+  <img src="./Screenshots/05-edit-sheet.PNG" width="260"/>
+  <img src="./Screenshots/06-light-mode.PNG" width="260"/>
+</p>
+
+**1. Categories** — Create and organise habit categories.
+
+**2. Habit Tracking** — Track daily habits with streaks and completion status.
+
+**3. Daily Diary** — Navigate between days and review previous progress.
+
+**4. Sorting & Filtering** — Organise habits alphabetically or by completion status.
+
+**5. Edit Habit** — Modify habit details through a dedicated edit sheet.
+
+**6. Light Mode** — Full support for both light and dark appearance.
 
 ---
 
