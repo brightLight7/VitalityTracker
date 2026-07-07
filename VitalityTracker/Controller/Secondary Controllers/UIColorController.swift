@@ -1,6 +1,6 @@
 import SwiftUI
 
-class ThemeManager : ObservableObject
+class UIColorController : ObservableObject
 {
     @AppStorage("forceDarkMode") var forceDarkMode: Bool = false
     {

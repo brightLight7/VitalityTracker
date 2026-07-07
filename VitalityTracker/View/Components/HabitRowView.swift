@@ -18,16 +18,19 @@ struct HabitRowView: View
     {
         streaksController.streak(for: item, endingOn: viewingDate)
     }
+    
+    private var isToday: Bool
+    {
+        Calendar.current.isDateInToday(viewingDate)
+    }
     var body: some View
     {
-        //        (item: Item) in
-        //            let done = streaksController.isCompleted(item.id, on: viewingDate)
-        //            let s = streaksController.streak(for: item, endingOn: viewingDate)
         
         HStack (spacing: 12)
         {
             Button
             {
+                guard isToday else {return}
                 streaksController.toggleCompletion(item.id, on: viewingDate)
             }
         label:
@@ -64,19 +67,6 @@ struct HabitRowView: View
         .onTapGesture {
             onTap()
         }
-        //.onLongPressGesture{onLongPress()}
-//            .onTapGesture{
-//                //guard isToday else {return} // read-only for previous days
-//                selectedItem = item
-//                showEditSheet = true
-//            }
-//            //.opacity(isToday ? 1 : 0.85)
-//            .onLongPressGesture
-//            {
-//                selectedItem = item
-//                quickRenameText = item.title
-//                showQuickRename = true
-//            }
-        }
+    }
     
 }

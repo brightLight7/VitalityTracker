@@ -1,15 +1,15 @@
 import SwiftUI
 
 struct DarkModeToolbarButton : View {
-    @EnvironmentObject var themeManager: ThemeManager
+    @EnvironmentObject var uiColorController: UIColorController
     var body: some View {
         Button
         {
-            themeManager.toggleDarkMode()
+            uiColorController.toggleDarkMode()
         }
     label:
         {
-            Image(systemName: themeManager.forceDarkMode ? "moon.fill" : "moon")
+            Image(systemName: uiColorController.forceDarkMode ? "moon.fill" : "moon")
         }
         
     }

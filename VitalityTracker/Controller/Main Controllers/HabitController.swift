@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 import Foundation
 
-class HabitListController: ObservableObject{
+class HabitController: ObservableObject{
     private var modelContext: ModelContext?
     @Published var habitItems: [Item] = []
     @Published var dailyLog: [String : DailyLog] = [:]
@@ -25,7 +25,7 @@ class HabitListController: ObservableObject{
     {
         guard let modelContext = modelContext else {return}
         guard !title.isEmpty else {return}
-        let newItem = Item(title: title, createdDate: date)
+        let newItem = Item(title: title, createdDate: date, category: category)
         modelContext.insert(newItem)
         category.items.append(newItem)
         saveContent()
@@ -80,7 +80,7 @@ class HabitListController: ObservableObject{
         }
     }
     
-    func filteredTodoItems(searchQuery: String) -> [Item]
+    func filteredHabitItems(searchQuery: String) -> [Item]
     {
         if searchQuery.isEmpty {
             return habitItems
